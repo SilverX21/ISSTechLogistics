@@ -1,4 +1,4 @@
-# ISSTechLogistics - orders tracking
+﻿# ISSTechLogistics - orders tracking
 
 This project consists on a Web API, that takes a .csv file and makes calculations for some statistics for a company.
 
@@ -26,10 +26,11 @@ NOTE: To test the endpoints, you just need to click in the endpoint you want to 
 
 - ProcessOrders -> To test this endpoint, you only need to provide a .csv file with the following requirements:
 	1. Must have the following headers: ShipmentId, Origin, Destination, Weight, DeliveryTime (this is case sensitive, write the names exactly like this);
+	
 	This endpoint is used to provide the orders details so the program can calculate the data. This file is saved in your local machine and the path can be custom.
 	To customize the path where the file is saved, you just need to go to the appsettings.json file and follow this:
-		LogisticsTechSettings > FileSettings > FilesSavePath
+		
+	LogisticsTechSettings > FileSettings > FilesSavePath
 	After you find the FilesSavePath, just change the content inside the string to your prefered path, this way you'll know where it is being saved.
-	
 - GetOrderStatistics -> this endpoint just retrieves the statistics data that are requested in the requirements
 - RecalculateOrdersStatistics -> this endpoint just recalculates the statistics, to test this, you can go to the file that was saved in the ProcessOrders endpoint (go to the location in your file explorer where the file is saved). Open this file and insert the data you need in order to recalculate the data. This endpoint will return the data of the statistics required.
