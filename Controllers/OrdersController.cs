@@ -21,21 +21,6 @@ public class OrdersController : ControllerBase
     #endregion Interfaces and constructor
 
     /// <summary>
-    /// Gets the statistics of the orders file
-    /// </summary>
-    /// <returns>Statistics of the orders</returns>
-    [HttpGet]
-    public async Task<IActionResult> GetOrderStatistics()
-    {
-        var result = await _ordersRepository.GetOrdersStatistics();
-
-        if (!result.Success)
-            return BadRequest(result);
-
-        return Ok(result);
-    }
-
-    /// <summary>
     /// Process the details of a given .csv file
     /// </summary>
     /// <param name="file">.csv file type</param>
@@ -47,6 +32,21 @@ public class OrdersController : ControllerBase
             return BadRequest(new { message = "Please insert a .csv file to process the orders details." });
 
         var result = await _ordersRepository.ProcessOrdersDetails(file);
+
+        if (!result.Success)
+            return BadRequest(result);
+
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Gets the statistics of the orders file
+    /// </summary>
+    /// <returns>Statistics of the orders</returns>
+    [HttpGet]
+    public async Task<IActionResult> GetOrderStatistics()
+    {
+        var result = await _ordersRepository.GetOrdersStatistics();
 
         if (!result.Success)
             return BadRequest(result);

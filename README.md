@@ -18,6 +18,8 @@ This will open a window in your default browser showing some endpoints for you t
 
 ## Endpoints:
 
+NOTE: To test the endpoints, you just need to click in the endpoint you want to test and then click in the "Try it out" button. After that you just need to fill the data you want and you're good to go :)
+
 - ProcessOrders -> To test this endpoint, you only need to provide a .csv file with the following requirements:
 	1. Must have the following headers: ShipmentId, Origin, Destination, Weight, DeliveryTime (this is case sensitive, write the names exactly like this);
 	This endpoint is used to provide the orders details so the program can calculate the data. This file is saved in your local machine and the path can be custom.
