@@ -16,6 +16,10 @@ This is executable locally, so it's not needed any type of special setup, the on
 To run this project, simply open the ISSTechLogistics.sln using VS 2022 and then press the F5 or Ctrl + F5 to run the project.
 This will open a window in your default browser showing some endpoints for you to test.
 
+NOTE: for this to work, you'll need to provide a instance for SQL Server. So to work with this, you'll have to do the following:
+- go to apssettings.json, in the section "ConnectionStrings" > "DefaultConnection" you'll need to change the "Server"" to your server (open the SSMS and then just copy your express instance);
+- After this is done, you just need to run the migrations so it can be created the database and the required tables, to do this, just open the terminal in the current localtion of the .sln and run this command: `dotnet ef database update`
+
 ## Endpoints:
 
 NOTE: To test the endpoints, you just need to click in the endpoint you want to test and then click in the "Try it out" button. After that you just need to fill the data you want and you're good to go :)
