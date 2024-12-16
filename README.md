@@ -18,7 +18,7 @@ This will open a window in your default browser showing some endpoints for you t
 
 NOTE: for this to work, you'll need to provide a instance for SQL Server. So to work with this, you'll have to do the following:
 - go to apssettings.json, in the section "ConnectionStrings" > "DefaultConnection" you'll need to change the "Server"" to your server (open the SSMS and then just copy your express instance);
-- After this is done, you just need to run the migrations so it can be created the database and the required tables, to do this, just open the terminal in the current localtion of the .sln and run this command: `dotnet ef database update`
+- After this is done, you just need to run the migrations so it can be created the database and the required tables, to do this, just open the Pachage Manager Console and run this command: `update-database`
 
 ## Endpoints:
 
